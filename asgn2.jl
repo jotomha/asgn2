@@ -88,9 +88,12 @@ print("Regression: ", coeff_vecs[3])  # returns almost the same number! is this 
 
 # Question 5
 @show z_vecs[:, 1]' * z_vecs[:, 3]
+#Interpretation: these are orthogonal
 
 # Question 6
 @show z_vecs[:, 2]' *z_vecs[:, 3]
+#Interpretation: these are orthogonal
 
 # Question 7
 @show β_k = (z_vecs[:, 3]' * y) / (z_vecs[:, 3]' * z_vecs[:, 3])
+#This is how the coefficient for the horsepower vector in the regression is calculated
