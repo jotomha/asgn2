@@ -53,11 +53,11 @@ end
 
 # Question 1
 mtcars = DataFrame(CSV.File("mtcars.csv"))  # Convert csv data into dataframe
-ols_est = lm(@formula(mpg ~ wt + hp), mtcars)
+ols_est = lm(@formula(mpg ~ wt + hp), mtcars)  # mpg as output, wt + hp as input. Not sure if you've used R before, seems to be the same syntax, but I have never used it so new to me
 coefficients = coeftable(ols_est)  # Included in GLM package
 println("hp coefficient: ", coefficients.cols[1][3])
 
-# Interpretation: I have absolutely no idea what this means.
+# Interpretation: For every increase in 1 horsepower, there is a 0.03 decrease in the mpg efficiency.  !! I HAVE ABSOLUTELY NO IDEA WHAT IT MEANS. THIS IS A WILD GUESS FROM WHAT I KNOW ABOUT LINEAR REGRESSION.
 
 
 # Question 2
@@ -67,7 +67,8 @@ regression = regress_orthogonalize(y, x)
 print("Regression: ", regression)  # returns almost the same number! is this correct?? Unclear
 
 
-# Question 3
+# Question 3: I do not know how to retrieve any of these values. Are we meant to print them within the orthogonal_regression function? 
+# Or return the whole matrix z? 
 
 # Question 4
 
